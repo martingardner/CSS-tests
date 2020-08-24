@@ -3,6 +3,84 @@ body {
   margin: 0;
 }
 
+/************** Table Skeleton Loader ********************/
+
+.skeleton-loader-table {
+  width: 100%;
+  height: 100%;
+}
+
+.skeleton-loader-table .skeleton-table-loader-wrapper {
+  border: 1px solid rgb(204, 204, 204);
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.skeleton-loader-table
+  .skeleton-table-loader-wrapper
+  .skeleton-loader-table-head {
+  height: 10%;
+  width: 100%;
+  background-color: rgb(204, 204, 204);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.skeleton-loader-table
+  .skeleton-table-loader-wrapper
+  .skeleton-loader-table-body {
+  height: 10%;
+  width: 100%;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.skeleton-loader-table
+  .skeleton-table-loader-wrapper
+  .skeleton-loader-table-head
+  .skeleton-loader-table-line,
+.skeleton-loader-table
+  .skeleton-table-loader-wrapper
+  .skeleton-loader-table-body
+  .skeleton-loader-table-line {
+  display: inline-block;
+  width: calc((100% / 6) - 0.25rem);
+  height: 0.5rem;
+}
+
+.skeleton-loader-table
+  .skeleton-table-loader-wrapper
+  .skeleton-loader-table-body
+  .skeleton-loader-table-line
+  .skeleton-loader-table-line-pulse {
+  background-color: rgb(204, 204, 204);
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/************** Table Skeleton Loader ********************/
+
+/************** Pulse Classes and Keyframes *************/
+.pulse {
+  animation-name: pulseKeyFrame;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulseKeyFrame {
+  from {
+    background-color: #ccc;
+  }
+  to {
+    background-color: #eee;
+  }
+}
+
+/*  
 .skeleton-loader {
   width: 400px;
   height: 200px;
@@ -42,3 +120,4 @@ body {
     background-color: #eee;
   }
 }
+*/
